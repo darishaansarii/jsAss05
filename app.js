@@ -97,15 +97,43 @@ document.write("<br>");
 
 // Question 07:
 var A=["cake", "apple pie", "cookie", "chips", "patties"];
+var flag=false;
 var userOrder=prompt("Welcome to ABC Bakery. What do you want to order sir/ma'am?");
 
 for(var i=0; i<A.length; i++) {
     if(A[i]===userOrder) {
+        flag=true;
         document.write(`<br>${userOrder} is <b>available</b> at index ${i} in our bakery.<br>`);
-        break;
     }
-    else {
-        document.write(`<br>We are sorry. ${userOrder} is <b>not available</b> in our bakery.<br>`);
-        break;
+}
+
+if(flag===false) {
+    document.write(`<br>We are sorry. ${userOrder} is <b>not available</b> in our bakery.<br>`);
+}
+
+// Question 08:
+var A = [24, 53, 78, 91, 12];
+var largest=A[0];
+for(var i=0; i<A.length; i++) {
+    if(A[i]>largest) {
+        largest=A[i];
     }
+}
+
+document.write(`<br><br>Array items: ${A}<br>The largest number is: ${largest}.`);
+
+// Question 09:
+var A = [24, 53, 78, 91, 12];
+var smallest=A[0];
+for(var i=0; i<A.length; i++) {
+    if(A[i]<smallest) {
+        smallest=A[i];
+    }
+}
+
+document.write(`<br><br>Array items: ${A}<br>The largest number is: ${smallest}.<br><br>`);
+
+// Question 10:
+for(var i=1; i<=20; i++) {
+    document.write(`${5*i}, `);
 }
